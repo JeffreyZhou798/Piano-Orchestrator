@@ -1,7 +1,7 @@
 # 🎹 Piano Orchestrator
 
 [![GitHub](https://img.shields.io/badge/GitHub-Code-black)](https://github.com/JeffreyZhou798/Piano-Orchestrator)
-[![ModelScope](https://img.shields.io/badge/ModelScope-Live_Demo-blue)](https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator05)
+[![ModelScope](https://img.shields.io/badge/ModelScope-Live_Demo-blue)](https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator01)
 [![Python](https://img.shields.io/badge/Python-3.10-green)](https://www.python.org/)
 [![Gradio](https://img.shields.io/badge/Gradio-6.8.0-orange)](https://gradio.app/)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
@@ -11,7 +11,7 @@
 Piano Orchestrator takes a **two-hand piano grand-staff score** (MusicXML / MXL / MIDI) and re-orchestrates it into a complete multi-instrument arrangement: your melody stays **untouched on top**, while METEOR generates N accompaniment tracks with the instruments you choose.
 
 🔗 **GitHub**: https://github.com/JeffreyZhou798/Piano-Orchestrator
-🌐 **Live Demo (ModelScope Space)**: https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator05
+🌐 **Live Demo (ModelScope Space)**: https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator01
 
 ---
 
@@ -33,7 +33,7 @@ Piano Orchestrator takes a **two-hand piano grand-staff score** (MusicXML / MXL 
 
 ## 🎬 Live Demo
 
-**Try it online — no installation**: [ModelScope Space](https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator05)
+**Try it online — no installation**: [ModelScope Space](https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator01)
 
 ### Interface
 
@@ -70,16 +70,16 @@ Upload piano score (MusicXML / .mxl / MIDI)  +  optional melody score
 
 **88 General MIDI instruments** mapped onto METEOR's 64 MMT instrument space:
 
-| Family | Examples |
-|--------|----------|
-| **Keyboards** | Acoustic Grand Piano, Harpsichord, Celesta, Marimba, Glockenspiel… |
-| **Organs** | Drawbar Organ, Church Organ, Accordion, Harmonica… |
-| **Guitars / Basses** | Nylon/Steel Guitar, Electric Guitar, Acoustic Bass, Synth Bass… |
-| **Strings** | Violin, Viola, Cello, Contrabass, String Ensemble, Harp… |
-| **Woodwinds** | Flute, Oboe, Clarinet, Bassoon, Saxophones, Piccolo, Pan Flute… |
-| **Brass** | Trumpet, Trombone, Tuba, French Horn, Brass Section… |
-| **Synthesizers** | Synth Lead, Synth Pad, Synth Strings, Synth Brass… |
-| **Ethnic / Percussion / Voice** | Sitar, Banjo, Shamisen, Koto, Kalimba, Timpani, Choir… |
+| Family                          | Examples                                                     |
+| ------------------------------- | ------------------------------------------------------------ |
+| **Keyboards**                   | Acoustic Grand Piano, Harpsichord, Celesta, Marimba, Glockenspiel… |
+| **Organs**                      | Drawbar Organ, Church Organ, Accordion, Harmonica…           |
+| **Guitars / Basses**            | Nylon/Steel Guitar, Electric Guitar, Acoustic Bass, Synth Bass… |
+| **Strings**                     | Violin, Viola, Cello, Contrabass, String Ensemble, Harp…     |
+| **Woodwinds**                   | Flute, Oboe, Clarinet, Bassoon, Saxophones, Piccolo, Pan Flute… |
+| **Brass**                       | Trumpet, Trombone, Tuba, French Horn, Brass Section…         |
+| **Synthesizers**                | Synth Lead, Synth Pad, Synth Strings, Synth Brass…           |
+| **Ethnic / Percussion / Voice** | Sitar, Banjo, Shamisen, Koto, Kalimba, Timpani, Choir…       |
 
 Polyphonic instruments (piano, organ, guitar, harp…) stay polyphonic even on the bass track; monophonic instruments (violin, winds, brass…) are kept monophonic. Every generated note is checked against the instrument's real-world range.
 
@@ -120,12 +120,12 @@ Unfold the advanced panel to control per track: **Rhythmic Intensity** (8 levels
 
 ## 🔧 Technical Notes
 
-| | |
-|---|---|
-| **Model** | METEOR (Transformer VAE, ~67M) — native multi-track Re-orchestration |
-| **Runtime** | Gradio 6.8.0, PyTorch 2.3.1 (CPU) |
-| **Deployed on** | ModelScope Space — free CPU (2 vCPU + 16 GB) |
-| **Sampling** | KV-cached incremental decoder, numerically equivalent to the original full-window forward (max logits Δ ≈ 1e-5), ~70× faster |
+|                      |                                                              |
+| -------------------- | ------------------------------------------------------------ |
+| **Model**            | METEOR (Transformer VAE, ~67M) — native multi-track Re-orchestration |
+| **Runtime**          | Gradio 6.8.0, PyTorch 2.3.1 (CPU)                            |
+| **Deployed on**      | ModelScope Space — free CPU (2 vCPU + 16 GB)                 |
+| **Sampling**         | KV-cached incremental decoder, numerically equivalent to the original full-window forward (max logits Δ ≈ 1e-5), ~70× faster |
 | **Melody guarantee** | locked copy, verified note-for-note by automated tests (pitch / onset / duration / attack count) |
 
 ---
@@ -169,12 +169,13 @@ MIT License
 **Jeffrey Zhou**
 
 ---
+
 ---
 
 # 🎹 Piano Orchestrator（钢琴谱多声部编配器）
 
 [![GitHub](https://img.shields.io/badge/GitHub-代码-black)](https://github.com/JeffreyZhou798/Piano-Orchestrator)
-[![ModelScope](https://img.shields.io/badge/ModelScope-在线演示-blue)](https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator05)
+[![ModelScope](https://img.shields.io/badge/ModelScope-在线演示-blue)](https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator01)
 [![Python](https://img.shields.io/badge/Python-3.10-green)](https://www.python.org/)
 [![Gradio](https://img.shields.io/badge/Gradio-6.8.0-orange)](https://gradio.app/)
 
@@ -183,7 +184,7 @@ MIT License
 上传**双手钢琴大谱表乐谱**（MusicXML / MXL / MIDI），系统自动重新编配为完整的多乐器作品：你的旋律**原封不动**保留在最上方，METEOR 按你选择的乐器生成 N 条伴奏轨。
 
 🔗 **GitHub**：https://github.com/JeffreyZhou798/Piano-Orchestrator
-🌐 **在线演示（ModelScope 创空间）**：https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator05
+🌐 **在线演示（ModelScope 创空间）**：https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator01
 
 ---
 
@@ -205,7 +206,7 @@ MIT License
 
 ## 🎬 在线演示
 
-**在线体验（无需安装）**：[ModelScope 创空间](https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator05)
+**在线体验（无需安装）**：[ModelScope 创空间](https://www.modelscope.cn/studios/JeffreyZhou02/PianoOrchestrator01)
 
 ### 界面截图
 
@@ -242,15 +243,15 @@ MIT License
 
 **88 种 General MIDI 乐器**，映射到 METEOR 的 64 种 MMT 乐器空间：
 
-| 类别 | 示例 |
-|------|------|
-| **键盘** | 大钢琴、羽管键琴、钢片琴、马林巴、钟琴… |
-| **风琴** | 拉杆风琴、教堂风琴、手风琴、口琴… |
-| **吉他 / 贝斯** | 尼龙/钢弦吉他、电吉他、原声贝斯、合成贝斯… |
-| **弦乐** | 小提琴、中提琴、大提琴、低音提琴、弦乐合奏、竖琴… |
-| **木管** | 长笛、双簧管、单簧管、大管、萨克斯、短笛、排箫… |
-| **铜管** | 小号、长号、大号、圆号、铜管合奏… |
-| **合成器** | 合成主音、合成铺底、合成弦乐、合成铜管… |
+| 类别                   | 示例                                                |
+| ---------------------- | --------------------------------------------------- |
+| **键盘**               | 大钢琴、羽管键琴、钢片琴、马林巴、钟琴…             |
+| **风琴**               | 拉杆风琴、教堂风琴、手风琴、口琴…                   |
+| **吉他 / 贝斯**        | 尼龙/钢弦吉他、电吉他、原声贝斯、合成贝斯…          |
+| **弦乐**               | 小提琴、中提琴、大提琴、低音提琴、弦乐合奏、竖琴…   |
+| **木管**               | 长笛、双簧管、单簧管、大管、萨克斯、短笛、排箫…     |
+| **铜管**               | 小号、长号、大号、圆号、铜管合奏…                   |
+| **合成器**             | 合成主音、合成铺底、合成弦乐、合成铜管…             |
 | **民族 / 打击 / 人声** | 西塔琴、班卓琴、三味线、古筝、卡林巴、定音鼓、合唱… |
 
 复音乐器（钢琴、风琴、吉他、竖琴…）即使承担低音声部仍保持复音；单音乐器（小提琴、木管、铜管…）始终保持单音。每个生成音符都对照乐器真实音域校验。
@@ -292,13 +293,13 @@ python app.py
 
 ## 🔧 技术细节
 
-| | |
-|---|---|
-| **模型** | METEOR（Transformer VAE，约 67M）——原生多轨 Re-orchestration |
-| **运行时** | Gradio 6.8.0、PyTorch 2.3.1（CPU） |
-| **部署于** | ModelScope 创空间——免费 CPU（2 vCPU + 16 GB） |
-| **采样** | KV 缓存增量解码器，与原版全窗口前向数值等价（max logits Δ ≈ 1e-5），提速约 70 倍 |
-| **旋律保证** | 锁定拷贝，自动化测试逐音验证（音高 / 起音 / 时值 / 击键数） |
+|              |                                                              |
+| ------------ | ------------------------------------------------------------ |
+| **模型**     | METEOR（Transformer VAE，约 67M）——原生多轨 Re-orchestration |
+| **运行时**   | Gradio 6.8.0、PyTorch 2.3.1（CPU）                           |
+| **部署于**   | ModelScope 创空间——免费 CPU（2 vCPU + 16 GB）                |
+| **采样**     | KV 缓存增量解码器，与原版全窗口前向数值等价（max logits Δ ≈ 1e-5），提速约 70 倍 |
+| **旋律保证** | 锁定拷贝，自动化测试逐音验证（音高 / 起音 / 时值 / 击键数）  |
 
 ---
 
@@ -341,6 +342,8 @@ MIT License
 **Jeffrey Zhou**
 
 
+
+
 ## ⚠️ Copyright Notice
 
 © 2026 Jeffrey Zhou. All rights reserved.
@@ -350,7 +353,4 @@ No part of this project may be copied, reproduced, modified, or distributed with
 
 Commercial use is strictly prohibited.
 
-
 *Built with ❤️ for music education*
-
-
